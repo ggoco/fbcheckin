@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/circle_frame"
+                android:layout_height="40dip"
+                android:layout_width="40dip"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:src="@drawable/ic_action_accept"
+                android:scaleType="fitXY"/>
+        <com.facebook.widget.ProfilePictureView
+                android:id="@+id/userPicture"
+                android:layout_height="60dip"
+                android:layout_width="60dip"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                facebook:preset_size="small" />
+        </FrameLayout>
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textColor="#333"
+            android:textSize="18sp" />
+        <ImageButton android:src="@drawable/ic_action_place"
+            android:layout_gravity="center"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:scaleType="fitXY"
+            android:id="@+id/create_checkin"
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
+	<ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:layout_gravity="center_horizontal" />
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="No checkins to display"
+        android:textColor="#CCC"
+        android:id="@+id/empty" />
+</LinearLayout>
